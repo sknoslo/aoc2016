@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"log"
 	"strconv"
 	"strings"
 )
@@ -18,6 +19,21 @@ func SplitInts(in string) ([]int, error) {
 	}
 
 	return out, nil
+}
+
+func MustSplitInts(in string) []int {
+	splits := strings.Fields(in)
+	out := make([]int, len(splits))
+
+	for i, s := range splits {
+		v, err := strconv.Atoi(s)
+		if err != nil {
+			log.Fatal(err)
+		}
+		out[i] = v
+	}
+
+	return out
 }
 
 func MustSplitIntsSep(in, sep string) []int {
