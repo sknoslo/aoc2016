@@ -6,11 +6,11 @@ type Vec2 struct {
 	X, Y int
 }
 
-var North = Vec2{ 0, -1 }
-var East = Vec2{ 1, 0 }
-var South = Vec2{ 0, 1 }
-var West = Vec2{ -1, 0 }
-var CardinalDirs = []Vec2{ North, East, South, West }
+var North = Vec2{0, -1}
+var East = Vec2{1, 0}
+var South = Vec2{0, 1}
+var West = Vec2{-1, 0}
+var CardinalDirs = []Vec2{North, East, South, West}
 
 func New(x int, y int) Vec2 {
 	return Vec2{x, y}
@@ -52,4 +52,27 @@ func (v Vec2) RotateCardinalCCW() Vec2 {
 	}
 
 	return CardinalDirs[i-1]
+}
+
+func FromRune(c rune) Vec2 {
+	switch c {
+	case 'N':
+		return North
+	case 'U':
+		return North
+	case 'E':
+		return East
+	case 'R':
+		return East
+	case 'S':
+		return South
+	case 'D':
+		return South
+	case 'W':
+		return West
+	case 'L':
+		return West
+	default:
+		panic("Not a valid direction")
+	}
 }
