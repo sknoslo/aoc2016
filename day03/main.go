@@ -18,7 +18,7 @@ func main() {
 }
 
 func isTri(a, b, c int) bool {
-	return a + b > c && a + c > b && c + b > a
+	return a+b > c && a+c > b && c+b > a
 }
 
 func partone() string {
@@ -26,7 +26,7 @@ func partone() string {
 	for _, line := range strings.Split(input, "\n") {
 		t := utils.MustSplitInts(line)
 
-		if isTri(t[0], t[1], t[2]){
+		if isTri(t[0], t[1], t[2]) {
 			valid++
 		}
 	}

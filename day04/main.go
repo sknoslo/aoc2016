@@ -95,7 +95,7 @@ mainloop:
 			if c == '-' {
 				decrypt[i] = ' '
 			} else {
-				decrypt[i] = rune((int(c - 'a') + sectorId) % 26 + int('a'))
+				decrypt[i] = rune((int(c-'a')+sectorId)%26 + int('a'))
 			}
 		}
 

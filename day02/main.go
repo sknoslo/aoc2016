@@ -19,7 +19,7 @@ func main() {
 }
 
 func partone() string {
-	pad := grids.New(3, 3, []byte{ '1', '2', '3', '4', '5', '6', '7', '8', '9' })
+	pad := grids.New(3, 3, []byte{'1', '2', '3', '4', '5', '6', '7', '8', '9'})
 	pos := vec2.New(1, 1)
 	lines := strings.Split(input, "\n")
 	res := make([]byte, len(lines))
@@ -40,11 +40,11 @@ func partone() string {
 
 func parttwo() string {
 	pad := grids.New(5, 5, []byte{
-		'_', '_', '1', '_', '_', 
+		'_', '_', '1', '_', '_',
 		'_', '2', '3', '4', '_',
 		'5', '6', '7', '8', '9',
 		'_', 'A', 'B', 'C', '_',
-		'_', '_', 'D', '_', '_', 
+		'_', '_', 'D', '_', '_',
 	})
 	pos := vec2.New(1, 1)
 	lines := strings.Split(input, "\n")
